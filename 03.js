@@ -14,9 +14,14 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
-  
+  for (let indice in amigos) {
+    if (amigos[indice].nombre.toLowerCase() === nombre.toLowerCase()) {
+      return amigos[indice];
+    }
+  }
+  return respuesta;
 }
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = buscarAmigo
+module.exports = buscarAmigo;
